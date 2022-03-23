@@ -1,10 +1,17 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-const Layout = ({ children }) => {
+const Layout = ({
+  currentTab,
+  setCurrentTab,
+  children
+}) => {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        currentTab={currentTab}
+        setCurrentTab={setCurrentTab}
+      />
       <div className="container main">{children}</div>
       <Footer />
     </>
